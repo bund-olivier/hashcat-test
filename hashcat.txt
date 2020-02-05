@@ -1,1 +1,5 @@
 https://github.com/hashcat/hashcat
+
+Office2013
+hashcat64.exe --force -a 0 -m 9600 hashList.txt wordList.txt
+hashcat64.exe --force -a 1 -m 9600 hashList.txt wordList.txt wordList-2.txt
