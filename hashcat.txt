@@ -1,5 +1,13 @@
 https://github.com/hashcat/hashcat
 
-Office2013
-hashcat64.exe --force -a 0 -m 9600 hashList.txt wordList.txt
-hashcat64.exe --force -a 1 -m 9600 hashList.txt wordList.txt wordList-2.txt
+Create hash from excel file:
+python office2hashcat.py fileHash.xlsx
+
+Using hashcat on a 2013 excel file:
+hashcat64.exe -a 0 -m 9600 fileHash.txt wordList-1.txt
+hashcat64.exe -a 1 -m 9600 fileHash.txt wordList-1.txt wordList-2.txt
+
+-a 0 -> wordlist mode
+-a 1 -> combinator mode
+-m -> specify the hash type
+--force -> ignore warnings
